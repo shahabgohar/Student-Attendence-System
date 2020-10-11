@@ -1,0 +1,413 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+}
+nav > .nav-options{
+    width: 40%;
+    height: 100%;
+    color: white;
+}
+.nav-options > div{
+    width: 50%;
+    height: 100%;
+    font-size: 25px;
+}
+.nav-options > div > a:link{
+    color: white;
+}
+.nav-options > div > a:hover{
+    color: red;
+}
+.display-grid  {
+    display: grid;
+}
+.grid-justify-content{
+    justify-items: center;
+}
+.grid-align-items-content{
+    align-items: center;
+}
+.display-flex{
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.flex-direction-row{
+    flex-display: row;
+}
+.flex-align-items-center{
+    align-items: center;
+}
+.flex-align-items-end{
+    align-items: flex-end;
+}
+
+.flex-justify-content-space-around{
+    justify-content: space-around;
+}
+.flex-justify-content-center{
+    justify-content: center;
+}
+.flex-align-items-stretch{
+    align-items: stretch;
+}
+.flex-justify-content-flex-end{
+    justify-content: flex-end;
+}
+.flex-align-item-start{
+    align-items: flex-start;
+}
+.flex-justify-content-flex-start{
+    justify-content: flex-start;
+}
+.flex-justify-content-stretch{
+    justify-content: stretch;
+}
+.flex-justify-content-space-between{
+    justify-content: space-between;
+}
+
+.hamburger{
+    background-color: black;
+    margin-left: 1%;
+    height: 100%;
+    width: 80px;
+}
+.hamburger > div {
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    float: left;
+}
+.hamburger:hover{
+    cursor: pointer;
+}
+aside{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+
+}
+aside >div{
+    background-color: darkred;
+    width: 30%;
+    height: 100vh;
+    color: white;
+    position: relative;
+    overflow-y: auto;
+}
+
+.aside-element{
+    width: 80%;
+    height: 10%;
+    background-color: navajowhite;
+    margin: 1%;
+    position: relative;
+
+}
+.aside-element-dropdown{
+    margin-top: -1%;
+    height: fit-content;
+}
+.aside-element > h1{
+    padding-left: 10%;
+}
+.aside-element:hover{
+    cursor: pointer;
+}
+.close-sign{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 5%;
+    background-color: crimson;
+}
+.close-sign:hover{
+    cursor: pointer ;
+}
+.internet-module{
+    width: 30vw;
+    height: 15vh;
+    position: fixed;
+    bottom: 1%;
+    left: 5%;
+    background-color: black;
+    z-index: 500;
+}
+.internet-module > div{
+    width: 100%;
+    height: 100%;
+    background-color: #2d3748;
+    color: white;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    text-align: center;
+    position: relative;
+}
+.dropdown{
+    width: 20%;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+.dashbard{
+    width: 100%;
+    height: 90vh;
+    background-color: #2d3748;
+}
+.summary{
+    width: 70%;
+    height: 10%;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.summary-blocks{
+    width: 70%;
+    height: 40%;
+    background-color: white;
+    grid-template-columns: repeat(3,33.33%);
+
+}
+.summary-blocks > div{
+    background-color: #2d3748;
+    width: 90%;
+    height: 90%;
+    color: white;
+}
+
+.student{
+    width: 100%;
+    height: 120vh;
+    background-color: #1a202c;
+}
+
+.grid-sample{
+    width: 90%;
+    height: 70%;
+    background-color: white;
+}
+
+.actions{
+    width: 90%;
+    height: 20%;
+    background-color: white;
+    margin-bottom: 1%;
+}
+.create-student{
+    width: 100%;
+    height: 90vh;
+    background-color: #1a202c;
+}
+.student-form{
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    grid-template-rows: repeat(12,8.33%);
+    grid-template-columns: 2% 96% 2%;
+    grid-gap: 1%;
+}
+.name{
+    grid-row: 1/3  ;
+    grid-column: 2/3;
+    grid-template-columns: repeat(3,32%);
+    grid-gap: 2%;
+    align-items: center;
+
+}
+.father-email{
+    grid-row: 3/5  ;
+    grid-column: 2/3;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1%;
+}
+.roll-class{
+    grid-row: 5/7;
+    grid-column: 2/3;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1%;
+}
+.gender-profile {
+    grid-row: 7/9;
+    grid-column: 2/3;
+    grid-template-columns: repeat(2,1fr);
+}
+label{
+    display: block;
+    font-size: 25px;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="date"], input[type="time"]{
+    width: 100%;
+    height: 8vh;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="password"],input[type="date"], input[type="time"]{
+    font-size: 30px;
+}
+.student-registeration-form{
+    grid-row: 9/11;
+    grid-column: 2/3;
+}
+.student-registeration-form > button{
+    width: 50%;
+    height: 70%;
+    font-size: 35px;
+    border-radius: 24px;
+}
+.student-registeration-form > div:hover{
+    cursor: pointer;
+}
+
+.admin-login{
+    width: 100%;
+    height: 100vh;
+    background-color: #5292f7;
+}
+.admin-form{
+    height: 60%;
+    width: 55%;
+    border-radius: 50px;
+    background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.attendence-admin{
+    width: 100%;
+    background-color: black;
+}
+.attendece-search{
+    width: 60% ;
+    height: 30vh;
+    background-color: white;
+    border-radius: 24px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    grid-row-gap: 5%;
+}
+.attendece-search-dropdown{
+grid-column: 1/5 ;
+    grid-row: 4/7;
+
+    position: relative;
+}
+.attendece-search-dropdown > #dd{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+
+}
+.attendece-search-dropdown:hover{
+    box-shadow: 3px 3px 2px 2px grey
+}
+.drop-arrow{
+    width: 10%;
+    height: 100%;
+}
+.attendece-search-dropdown-list{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    width: 100%;
+    height: fit-content;
+    z-index: 100;
+    box-shadow: 3px 3px 2px 2px grey
+}
+.drop-arrow:hover{
+    cursor: pointer;
+}
+.selected-criteria-label{
+    grid-column: 1/5;
+    grid-row: 1/4;
+
+}
+.selected-criteria{
+    grid-column: 1/5;
+    grid-row: 7/13;
+}
+.selected-criteria > div{
+    width: 40%;
+    height: 45%;
+    background-color: #a0aec0;
+    margin: 1%;
+}
+
+.select-attendence{
+    grid-column: 7/13;
+    grid-row: 1/13;
+}
+.select-attendence >div >label{
+    display: inline;
+}
+.attendence-result{
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+}
+.admin-report{
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+}
+.student-search-report{
+    width: 80%;
+    height: 20vh;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    background-color: white;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 5%;
+}
+.search-student-report{
+    width: 80%;
+    height: 10vh;
+
+}
+.search-student-report > button{
+    width: 30%;
+    height: 100%;
+    border-radius: 5%;
+    font-size: 40px;
+}
+.search-student-report > button:hover{
+    cursor: pointer;
+}
+.student-menu{
+    width: 100%;
+    height: 90vh;
+}
+.student-menu > div > button{
+    width: 20%;
+    height: 100%;
+    font-size: 35px;
+    border-radius: 10%;
+}
+.student-menu > div > button{
+    cursor: pointer;
+}
+.admin-create-attendence{
+    width: 100%;
+    height: 100vh;
+
+
+}
+.admin-create-attendence-form{
+    width: 40%;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5%;
+}
+

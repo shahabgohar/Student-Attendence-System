@@ -1,0 +1,9 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/admin/app.css": "/css/admin/app.css",
+    "/js/attendence.js": "/js/attendence.js",
+    "/js/attendence-search.js": "/js/attendence-search.js",
+    "/js/student-details.js": "/js/student-details.js",
+    "/js/student-report.js": "/js/student-report.js"
+}
