@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\AttendenceDetail;
+use App\ReuseableCode\MarkAttendence;
+use App\ReuseableCode\ProvideDate;
 use Illuminate\Http\Request;
+
 
 class AttendenceDetailController extends Controller
 {
+    use ProvideDate, MarkAttendence;
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +39,9 @@ class AttendenceDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $application = $request->input('application');
+        $result = $this->markAttendence(json_encode($application));
+        return response()->json($result,200);
     }
 
     /**

@@ -410,4 +410,18 @@ grid-column: 1/5 ;
     grid-template-rows: 1fr 1fr;
     grid-gap: 5%;
 }
-
+.submit-application{
+    width: 100%;
+    height: 90vh;
+}
+#text-area{
+    height: 80%;
+    width: 70%;
+    background-color: white;
+    border: solid black 5px;
+}
+.leave-submit{
+    width: 30%;
+    height: 10%;
+    border-radius: 24px;
+}

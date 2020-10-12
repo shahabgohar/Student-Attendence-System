@@ -9,8 +9,8 @@
  <div style="width: 100%;height: 20%" class="display-flex flex-align-items-center flex-direction-row flex-justify-content-space-around">
       @can('mark-attendence')
         <button wire:click.prevent="markAttendence">Mark Attendence</button>
-        <button>Mark Leave</button>
+        <button wire:click.prevent = "markLeave">Mark Leave</button>
      @endcan
-    <button>View Your Attendence</button>
+    <button wire:click.prevent = "hello">View Your Attendence</button>
  </div>
 </div>

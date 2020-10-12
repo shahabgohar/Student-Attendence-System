@@ -5,9 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js" ></script>
     <link rel="stylesheet" href="{{asset('css/admin/app.css')}}">
     @livewireStyles
-    <script src="{{asset('js/app.js')}}" defer></script>
+    <script src="{{asset('js/app.js')}}" ></script>
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" defer></script>
     @if(Route::currentRouteName() === 'student-details')
@@ -31,8 +33,9 @@
 {{--script for attendence component--}}
 <script src="{{asset('js/student-report.js')}}" defer></script>
 
-
+<script src="{{asset('js/submit-leave.js')}}" ></script>
 <script>
+
  Livewire.on('selectMultiple', data => {
      let parent = document.getElementById('selected-criteria')
      let child  = document.createElement('div')

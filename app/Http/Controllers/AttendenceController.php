@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Attendence;
-use App\Models\User;
+use App\ReuseableCode\MarkAttendence;
+use App\ReuseableCode\ProvideDate;
 use Illuminate\Http\Request;
 
 class AttendenceController extends Controller
 {
+    use ProvideDate, MarkAttendence;
     public function __construct(){
         $this->middleware(['auth']);
     }

@@ -24,6 +24,9 @@ Route::middleware(['guest'])->group(function (){
 });
 Route::middleware(['auth','user_role'])->group(function(){
     Route::get('/',\App\Http\Livewire\Student\Menu::class)->name('student-home');
+    Route::get('/submit/leave',\App\Http\Livewire\Student\SubmitLeave::class)->name('submit-leave');
+    Route::post('/submit/leave',[\App\Http\Controllers\AttendenceDetailController::class,'store']);
+
 });
 
 Route::prefix('/admin')->middleware(['auth','check_role'])->group(function() {
