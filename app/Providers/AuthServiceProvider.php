@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
 //            check the status of the attendence detail for against the user
         $attendence_detail = $user->user_profile()->first()->attendence_detail()->first();
 //        if not expired then
-            return !$attendence_detail->expired;
+            return !$attendence_detail->expired ;
         });
 
         Gate::define('view-sidebar',function(User $user){

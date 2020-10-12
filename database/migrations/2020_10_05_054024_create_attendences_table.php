@@ -16,7 +16,7 @@ class CreateAttendencesTable extends Migration
         Schema::create('attendences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_profile_id')->constrained('user_profiles')->onDelete('cascade');
-            $table->foreignId('student_class_id')->constrained('users');
+//            $table->foreignId('student_class_id')->constrained('users');
             $table->date('attendence_date');
             $table->string('status');
             $table->softDeletes();
