@@ -14,7 +14,6 @@ class Menu extends Component
 {
     use ProvideDate;
 
-
     public function render()
     {
         return view('livewire.student.menu')
@@ -32,6 +31,8 @@ class Menu extends Component
             'user_profile_id' => $userProfile->id,
             'attendence_detail_id' => $userProfile->attendence_detail_id
         ]);
+//          student has submitted his/her present
+        $userProfile->update(['attendence_detail_id'=> null]);
         if($result) \session()->put(['attendence'=>' Your Attendence has been submitted ']);
         else \session()->put(['']);
 

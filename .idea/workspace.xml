@@ -23,15 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4e8aed6-23a1-4864-92e2-0f5048447842" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ReuseableCode/ProvideDate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Student/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Student/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/AttendenceDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AttendenceDetail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ReuseableCode/MakeOutDatedAttendenceExpired.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ReuseableCode/MakeOutDatedAttendenceExpired.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_05_054024_create_attendences_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_05_054024_create_attendences_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AttendenceDetailSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AttendenceDetailSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/student/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/student/menu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +224,7 @@
       <workItem from="1602304622021" duration="30897000" />
       <workItem from="1602406406946" duration="9734000" />
       <workItem from="1602418892622" duration="14419000" />
-      <workItem from="1602482570150" duration="8068000" />
+      <workItem from="1602482570150" duration="10268000" />
     </task>
     <servers />
   </component>
@@ -280,9 +275,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="665" y="247" width="590" height="612" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1601908351205" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602488029279">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602496168139">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602488029279" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602496168139" />
   </component>
 </project>

@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class UserProfile extends Model
 {
     use HasFactory;
+    protected $fillable = [
+      'attendence_detail_id'
+    ];
     public function student_class()
     {
         return $this->belongsTo('App\Models\StudentClass');

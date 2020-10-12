@@ -29,8 +29,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
         Gate::define('mark-attendence',function (User $user){
+            $userProfile = $user->user_profile()->first();
+//            check if the student has been assigned any attendence
+            if($userProfile->attendence_detail_id == null) return  false;
 //            check the status of the attendence detail for against the user
-        $attendence_detail = $user->user_profile()->first()->attendence_detail()->first();
+        $attendence_detail = $user->user_profile()->first()->attendence_detail()->first()->toSql();
+
 //        if not expired then
             return !$attendence_detail->expired ;
         });
