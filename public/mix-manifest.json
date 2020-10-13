@@ -6,5 +6,6 @@
     "/js/attendence-search.js": "/js/attendence-search.js",
     "/js/student-details.js": "/js/student-details.js",
     "/js/student-report.js": "/js/student-report.js",
-    "/js/submit-leave.js": "/js/submit-leave.js"
+    "/js/submit-leave.js": "/js/submit-leave.js",
+    "/js/view-attendence.js": "/js/view-attendence.js"
 }

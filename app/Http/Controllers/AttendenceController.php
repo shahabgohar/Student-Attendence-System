@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Attendence;
+use App\Models\User;
 use App\ReuseableCode\MarkAttendence;
 use App\ReuseableCode\ProvideDate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AttendenceController extends Controller
 {
     use ProvideDate, MarkAttendence;
     public function __construct(){
-        $this->middleware(['auth']);
+      //  $this->middleware(['auth']);
     }
 
     /**
@@ -32,16 +34,11 @@ class AttendenceController extends Controller
         return response()->json($result);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function showAttendenceByUser(Request $request)
     {
-        //
+        if($request->type == 'leave') return \response()->json(Auth::user()->user_profile()->first()->attendences()->where('attendences.status','<>','present')->where('attendences.status','<>','absent')->get());
+       else return \response()->json(Auth::user()->user_profile()->first()->attendences()->where('attendences.status','=',$request->type)->get());
     }
-
     /**
      * Store a newly created resource in storage.
      *

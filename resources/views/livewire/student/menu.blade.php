@@ -11,6 +11,6 @@
         <button wire:click.prevent="markAttendence">Mark Attendence</button>
         <button wire:click.prevent = "markLeave">Mark Leave</button>
      @endcan
-    <button wire:click.prevent = "hello">View Your Attendence</button>
+    <button wire:click.prevent = "viewAttendence">View Your Attendence</button>
  </div>
 </div>

@@ -431,3 +431,32 @@ grid-column: 1/5 ;
     height: 10%;
     border-radius: 24px;
 }
+.option-attendence-view{
+    width: 100%;
+    height: 8vh;
+    background-color: blue;
+}
+.option-attendence-view > button{
+    width: 22%;
+    height: 100%;
+    border-radius: 12px;
+    font-size: 25px;
+}
+.option-attendence-view > button:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.selected-option-attendence-view{
+    background-color: red;
+    color: white;
+}
+#attendence-view{
+    width: 100%;
+    height: 73vh;
+    background-color: blue;
+}
+#attendence-view > div{
+    width: 80%;
+    height: 100%;
+}

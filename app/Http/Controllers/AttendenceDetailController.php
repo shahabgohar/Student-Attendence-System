@@ -44,7 +44,7 @@ class AttendenceDetailController extends Controller
         return response()->json($result,200);
     }
 
-    /**
+    /*
      * Display the specified resource.
      *
      * @param  \App\Models\AttendenceDetail  $attendenceDetail

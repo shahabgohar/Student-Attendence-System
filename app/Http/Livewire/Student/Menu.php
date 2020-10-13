@@ -27,4 +27,7 @@ class Menu extends Component
     public function markLeave(){
         return redirect(route('submit-leave'));
     }
+    public function viewAttendence(){
+        return redirect(route('view-attendence-page'));
+    }
 }

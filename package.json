@@ -19,6 +19,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "cheetah-grid": "^0.22.9",
         "turbolinks": "^5.2.0"
     }
 }

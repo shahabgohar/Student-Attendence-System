@@ -23,23 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4e8aed6-23a1-4864-92e2-0f5048447842" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ReuseableCode/MarkAttendence.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/submit-leave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/view-attendence.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendenceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendenceDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendenceDetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Student/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Student/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_05_054024_create_attendences_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_05_054024_create_attendences_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/admin/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/admin/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/admin/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/student/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/student/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
@@ -240,6 +236,8 @@
       <workItem from="1602406406946" duration="9734000" />
       <workItem from="1602418892622" duration="14419000" />
       <workItem from="1602482570150" duration="24554000" />
+      <workItem from="1602535509679" duration="3168000" />
+      <workItem from="1602582456939" duration="8250000" />
     </task>
     <servers />
   </component>
@@ -256,6 +254,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="682" y="346" width="556" height="417" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602252149021">
@@ -294,9 +293,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="254" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602525664787" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602525498097">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602591154146">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602525498097" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602591154146" />
   </component>
 </project>
