@@ -25,7 +25,7 @@ Route::middleware(['api'])->group(function (){
 });
 Route::middleware(['auth','user_role'])->group(function(){
     Route::get('/',\App\Http\Livewire\Student\Menu::class)->name('student-home');
-    Route::get('/submit/leave',\App\Http\Livewire\Student\SubmitLeave::class)->name('submit-leave');
+    Route::get('/submit/leave',\App\Http\Livewire\Student\SubmitLeave::class)->middleware(['attendence_present'])->name('submit-leave');
     Route::post('/submit/leave',[\App\Http\Controllers\AttendenceDetailController::class,'store']);
     Route::post('/view/attendence/',[\App\Http\Controllers\AttendenceController::class,'showAttendenceByUser']);
     Route::get('/view/attendence',\App\Http\Livewire\Student\ViewAttendence::class)->name('view-attendence-page');

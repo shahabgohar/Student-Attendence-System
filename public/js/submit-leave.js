@@ -102,6 +102,7 @@ Livewire.on('hello', function () {
     application: data
   }).then(function (response) {
     console.log(response);
+    window.location.href = appUrl + "/";
   })["catch"](function (error) {
     console.log(error);
   });

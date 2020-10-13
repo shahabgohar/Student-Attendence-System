@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AttendencePresent;
 use App\Http\Middleware\CheckRole;
 use App\Http\Middleware\CheckUserRole;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -68,5 +69,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'attendence_present' => AttendencePresent::class
     ];
 }

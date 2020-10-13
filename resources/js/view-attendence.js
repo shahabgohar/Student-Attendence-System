@@ -5,7 +5,6 @@ viewAttendence();
 document.getElementById("present").classList.add("selected-option-attendence-view")
 function viewAttendence(type="present"){
     axios.post(window.appUrl+"/view/attendence/",{type:type}).then(response => {
-        console.log(response.data)
         studentRecord = response.data
         loadData()
 

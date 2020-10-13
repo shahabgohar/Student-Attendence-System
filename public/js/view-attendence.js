@@ -28853,7 +28853,6 @@ function viewAttendence() {
   axios.post(window.appUrl + "/view/attendence/", {
     type: type
   }).then(function (response) {
-    console.log(response.data);
     studentRecord = response.data;
     loadData();
   })["catch"](function (error) {
