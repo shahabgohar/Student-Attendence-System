@@ -1,6 +1,6 @@
 <div class="leave-approval">
     <div class="display-grid leave-approval-section">
-        <div class="approval-list" wire:scroll="$emit('scroll')">
+        <div class="approval-list" >
 
         </div>
         <div class="leave-application display-grid">
@@ -11,8 +11,8 @@
                 </div>
             </div>
             <div class="approve-button display-flex flex-justify-content-space-between flex-align-items-center">
-                <button >Approve</button>
-                <button>DisApprove</button>
+                <button id="approve">Approve</button>
+                <button id="disapprove">DisApprove</button>
             </div>
         </div>
     </div>

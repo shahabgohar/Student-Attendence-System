@@ -20,7 +20,7 @@ Route::middleware(['guest'])->group(function (){
     Route::get('/login',\App\Http\Livewire\Student\Login::class);
     Route::get('/register',\App\Http\Livewire\Student\Signup::class);
     Route::get('/admin',\App\Http\Livewire\AdminLogin::class)->name('admin-login');
-    Route::get('/approve/leave',\App\Http\Livewire\LeaveApproval::class);
+
 });
 Route::middleware(['auth','user_role'])->group(function(){
     Route::get('/',\App\Http\Livewire\Student\Menu::class)->name('student-home');
@@ -28,6 +28,7 @@ Route::middleware(['auth','user_role'])->group(function(){
     Route::post('/submit/leave',[\App\Http\Controllers\AttendenceDetailController::class,'store']);
     Route::post('/view/attendence/',[\App\Http\Controllers\AttendenceController::class,'showAttendenceByUser']);
     Route::get('/view/attendence',\App\Http\Livewire\Student\ViewAttendence::class)->name('view-attendence-page');
+
 });
 
 Route::prefix('/admin')->middleware(['auth','check_role'])->group(function() {
@@ -42,6 +43,11 @@ Route::prefix('/admin')->middleware(['auth','check_role'])->group(function() {
         Route::get('/attendence/create',\App\Http\Livewire\CreateAttendence::class)->name('create-attendence');
 
     });
+    Route::get('/approve/leave',\App\Http\Livewire\LeaveApproval::class);
+    Route::get('/attendences/for/approval',[\App\Http\Controllers\AttendenceController::class,'getLeavesForApproval']);
+    Route::get('/attendences/leave/application/{id}',[\App\Http\Controllers\AttendenceController::class,'getApplication']);
+    Route::post('/approve/application',[\App\Http\Controllers\AttendenceController::class,'approveApplication']);
+    Route::post('/disapprove/application',[\App\Http\Controllers\AttendenceController::class,'disapprovApplication']);
  });
 Route::middleware(['auth'])->group(function(){
     Route::get('/student-details',function(){

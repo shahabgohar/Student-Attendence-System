@@ -12,7 +12,8 @@ class Attendence extends Model
     use HasFactory;
     protected $fillable = [
         'attendence_date',
-        'status'
+        'status',
+        'leave_approval'
     ];
     public function users(){
         return $this->belongsTo('App\Models\User');

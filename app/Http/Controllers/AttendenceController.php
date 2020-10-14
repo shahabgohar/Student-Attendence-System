@@ -17,16 +17,20 @@ class AttendenceController extends Controller
       //  $this->middleware(['auth']);
     }
 
+    public function getApplication($id){
+        $application =
+            Attendence::
+            find((int)$id);
+        return response()->json($application);
+    }
     public function getLeavesForApproval(){
 //        get the pending leaves from the database
-//        $data = Attendence::
-//            with('user_profile')
-//            ->select('attendences.id','attendences.student_class_id','attendences.attendence_date')
-//            ->where('attendences.leave_approval','=',1)->where('attendences.status','<>','path to leave')->paginate(15);
         $data = DB::table('attendences')
             ->join("user_profiles",'attendences.id','=','user_profiles.id')
             ->join('users','users.id','=','user_profiles.id')
-            ->select('attendences.id','attendences.student_class_id','user_profiles.roll_number','users.first_name','users.last_name')->paginate(15);
+            ->select('attendences.id','attendences.student_class_id','user_profiles.roll_number','users.first_name','users.last_name')
+            ->where('attendences.leave_approval','=',1)
+           ->paginate(15);
         return response()->json($data);
     }
 
@@ -53,15 +57,15 @@ class AttendenceController extends Controller
         if($request->type == 'leave') return \response()->json(Auth::user()->user_profile()->first()->attendences()->where('attendences.status','<>','present')->where('attendences.status','<>','absent')->get());
        else return \response()->json(Auth::user()->user_profile()->first()->attendences()->where('attendences.status','=',$request->type)->get());
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function approveApplication(Request $request){
+        $input = $request->input('id');
+        $result = Attendence::find($input)->update(['leave_approval'=>3]);
+        return response()->json($result);
+    }
+    public function disapprovApplication(Request $request){
+        $input = $request->input('id');
+        $result = Attendence::find($input)->update(['leave_approval'=>2]);
+        return response()->json($result);
     }
 
     /**

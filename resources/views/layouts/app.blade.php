@@ -15,7 +15,9 @@
     @livewireStyles
     <script src="{{asset('js/app.js')}}"  defer></script>
     @livewireScripts
-    <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
+        data-turbolinks-eval="false" defer></script>
     @if(Route::currentRouteName() === 'student-details')
         <script src="{{asset('js/student-details.js')}}" defer></script>
     @endif
@@ -27,10 +29,10 @@
 
 </head>
 <body>
-{{--@if(\Illuminate\Support\Facades\Auth::check())--}}
+@if(\Illuminate\Support\Facades\Auth::check())
 @livewire('nav-bar')
 @livewire('side-bar')
-{{--@endif--}}
+@endif
 @yield('content')
 </body>
 {{--script for attendence component--}}

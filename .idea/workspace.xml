@@ -23,27 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4e8aed6-23a1-4864-92e2-0f5048447842" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/leave-approval.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendenceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LeaveApprovalModule.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SubmitLeave.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Attendence.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Attendence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_05_054024_create_attendences_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_05_054024_create_attendences_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AttendenceSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AttendenceSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserProfileSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserProfileSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/submit-leave.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/submit-leave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/admin/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/admin/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/submit-leave.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/submit-leave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/view-attendence.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/view-attendence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/leave-approval.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/leave-approval.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/leave-approval.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/leave-approval.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/leave-approval-module.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/submit-leave.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/leave-approval.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/leave-approval.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +233,7 @@
       <workItem from="1602535509679" duration="3168000" />
       <workItem from="1602582456939" duration="11786000" />
       <workItem from="1602606292536" duration="2703000" />
-      <workItem from="1602653962866" duration="17594000" />
+      <workItem from="1602653962866" duration="27160000" />
     </task>
     <servers />
   </component>
@@ -301,9 +289,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="254" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602660623111" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602670876223">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602690863751">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602670876223" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602690863751" />
   </component>
 </project>
