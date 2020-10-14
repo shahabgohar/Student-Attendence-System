@@ -39,7 +39,7 @@ class UserProfileSeeder extends Seeder
                     'user_id' => $stuent_ids[$i]->id,
                     'student_class_id' => $class_ids[$j]->id,
                     'father_name' => \Illuminate\Support\Str::random(10),
-                    'roll_number' => ++$this->rollNumberAssign[$j+1],
+                    'roll_number' => $this->rollNumberAssign[$j+1],
                     'profile_photo' => Str::random(10),
                     'attendence_detail_id' => 1
                 ]);

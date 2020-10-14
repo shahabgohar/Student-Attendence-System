@@ -9,6 +9,8 @@
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js" ></script>
     @endif
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js" defer></script>
     <link rel="stylesheet" href="{{asset('css/admin/app.css')}}">
     @livewireStyles
     <script src="{{asset('js/app.js')}}"  defer></script>
@@ -42,6 +44,7 @@
     <script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
     <script src="{{asset('js/view-attendence.js')}}" defer ></script>
 @endif
+<script src="{{asset('js/leave-approval.js')}}" defer></script>
 <script defer>
 
  Livewire.on('selectMultiple', data => {

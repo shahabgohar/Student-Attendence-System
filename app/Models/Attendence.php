@@ -17,7 +17,7 @@ class Attendence extends Model
     public function users(){
         return $this->belongsTo('App\Models\User');
     }
-    public function profiles(){
+    public function user_profile(){
         return $this->belongsTo('App\Models\UserProfile');
     }
 }

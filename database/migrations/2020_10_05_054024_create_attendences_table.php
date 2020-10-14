@@ -19,6 +19,11 @@ class CreateAttendencesTable extends Migration
             $table->foreignId('student_class_id')->constrained('users');
             $table->date('attendence_date');
             $table->string('status');
+//          1 ===>  by default it will always be pending
+//          2 ===> rejected
+//          3 ===> approved
+//          4 ===> not a leave
+            $table->integer('leave_approval')->default(1);
             $table->softDeletes();
             $table->timestamps();
         });

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class AttendenceSeeder extends Seeder
 {
-    public $status = ['present', 'absent', 'path to leave'];
+    public $status = ['present', 'absent', '{"ops":[{"insert":"sdabiusssssssssssskml\ndaaaaaaaaaaaaaaaaa\ndadadadadad"},{"attributes":{"header":1},"insert":null},{"insert":null},{"attributes":{"italic":true},"insert":"fhgfbdfsvdvdczxczxczxczxcz"},{"insert":null}]}'];
 
     /**
      * Run the database seeds.
@@ -42,7 +42,9 @@ class AttendenceSeeder extends Seeder
                             'attendence_date' => $randomDate,
                             'student_class_id' => $student_ids[$i]->student_class_id,
                             'status' => $this->status[$j],
-                            'attendence_detail_id' => (int)$student_ids[$i]->student_class_id === 1 ? 1 : null
+                            'attendence_detail_id' => (int)$student_ids[$i]->student_class_id === 1 ? 1 : null,
+//                            if attendence status is path to leave then it will be 1 and if it is present or absent then it will be 4
+                            'leave_approval' => $j == 2 ? 1 : 4
                         ]);
                         $j++;
                     }

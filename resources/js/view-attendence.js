@@ -7,7 +7,6 @@ function viewAttendence(type="present"){
     axios.post(window.appUrl+"/view/attendence/",{type:type}).then(response => {
         studentRecord = response.data
         loadData()
-
     }).catch(error => {
         console.log(error)
     })

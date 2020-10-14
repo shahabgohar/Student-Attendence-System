@@ -8,12 +8,26 @@ use App\ReuseableCode\MarkAttendence;
 use App\ReuseableCode\ProvideDate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AttendenceController extends Controller
 {
     use ProvideDate, MarkAttendence;
     public function __construct(){
       //  $this->middleware(['auth']);
+    }
+
+    public function getLeavesForApproval(){
+//        get the pending leaves from the database
+//        $data = Attendence::
+//            with('user_profile')
+//            ->select('attendences.id','attendences.student_class_id','attendences.attendence_date')
+//            ->where('attendences.leave_approval','=',1)->where('attendences.status','<>','path to leave')->paginate(15);
+        $data = DB::table('attendences')
+            ->join("user_profiles",'attendences.id','=','user_profiles.id')
+            ->join('users','users.id','=','user_profiles.id')
+            ->select('attendences.id','attendences.student_class_id','user_profiles.roll_number','users.first_name','users.last_name')->paginate(15);
+        return response()->json($data);
     }
 
     /**

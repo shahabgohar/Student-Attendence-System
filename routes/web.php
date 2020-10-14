@@ -15,13 +15,12 @@ use Illuminate\Http\Request;
 */
 
 
-Route::middleware(['api'])->group(function (){
+Route::middleware(['guest'])->group(function (){
 
     Route::get('/login',\App\Http\Livewire\Student\Login::class);
     Route::get('/register',\App\Http\Livewire\Student\Signup::class);
     Route::get('/admin',\App\Http\Livewire\AdminLogin::class)->name('admin-login');
-
-
+    Route::get('/approve/leave',\App\Http\Livewire\LeaveApproval::class);
 });
 Route::middleware(['auth','user_role'])->group(function(){
     Route::get('/',\App\Http\Livewire\Student\Menu::class)->name('student-home');
@@ -32,7 +31,6 @@ Route::middleware(['auth','user_role'])->group(function(){
 });
 
 Route::prefix('/admin')->middleware(['auth','check_role'])->group(function() {
-    Route::get('attendence/approval',\App\Http\Livewire\LeaveApprovalModule::class);
     Route::get('/student/report',\App\Http\Livewire\StudentAttendenceReport::class)->name('attendence-report');
     Route::get('/dashboard', \App\Http\Livewire\Dashboard::class)->name('admin-dashboard');
     Route::prefix('/student')->group(function(){

@@ -81,43 +81,101 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/submit-leave.js":
-/*!**************************************!*\
-  !*** ./resources/js/submit-leave.js ***!
-  \**************************************/
+/***/ "./resources/js/leave-approval.js":
+/*!****************************************!*\
+  !*** ./resources/js/leave-approval.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var quill = new Quill('#text-area', {
+var quill = new Quill('#view-leave', {
   theme: 'snow'
 });
-Livewire.on('hello', function () {
-  var data = quill.getContents();
-  axios.post(appUrl + "/submit/leave", {
-    application: data
-  }).then(function (response) {
-    console.log(alert(response.data));
-    window.location.href = appUrl + "/";
+var scollingElement = document.getElementsByClassName("approval-list");
+scollingElement = scollingElement[0];
+var nextPageUrl = null;
+var currentPage = null;
+var lastPage = null;
+var isDataLoding = true;
+getDataFromServer();
+
+function createElementForAttatchment(tit, capt, id) {
+  var div = document.createElement('div');
+  div.classList.add("approval-list-tab");
+  div.classList.add("display-flex");
+  div.classList.add("display-flex");
+  div.classList.add("flex-direction-column");
+  div.classList.add("flex-align-item-start");
+  div.classList.add("flex-justify-content-space-between");
+  div.setAttribute("wire:click", "$emit('launchLeave',".concat(id, ")"));
+  var h1 = document.createElement('h1');
+  h1.innerHTML = tit;
+  var h2 = document.createElement('h2');
+  h2.innerHTML = capt;
+  div.appendChild(h1);
+  div.appendChild(h2);
+  return div; // let template =
+  //     ` <div class="approval-list-tab display-flex
+  //         flex-direction-column flex-align-item-start
+  //          flex-justify-content-space-between" wire:click="$emit('laucnhLeave',${id})">
+  //             <h1 style="text-align: left">${tit}</h1>
+  //             <h2>${capt}</h2>
+  //         </div>`
+  // return template
+}
+
+function getDataFromServer() {
+  axios.get(appUrl + "/api/attendences/for/approval").then(function (response) {
+    console.log(response.data);
+    var data = response.data.data;
+    nextPageUrl = response.data.next_page_url;
+    data.forEach(function (d) {
+      var title = d.first_name + " " + d.last_name;
+      var caption = "ROll NUMBER : " + d.roll_number + " Class : " + d.student_class_id;
+      scollingElement.appendChild(createElementForAttatchment(title, caption, d.id));
+    });
   })["catch"](function (error) {
     console.log(error);
   });
+} // function fetchNextDataFromSever(){
+//     axios.get(nextPageUrl).then(response=>{
+//         console.log(response.data)
+//         let data = response.data.data
+//         nextPageUrl = response.data.next_page_url
+//         data.forEach(d => {
+//             let title = d.first_name + " " + d.last_name
+//             let caption = "ROll NUMBER : "+d.roll_number + " Class : "+d.student_class_id
+//             scollingElement.insertAdjacentHTML("beforeend",createElementForAttatchment(title,caption,d.id))
+//         })
+//     }).catch(error =>{
+//         console.log(error)
+//     })
+// }
+
+
+Livewire.on('scroll', function () {
+  var remainingBottom = scollingElement.scrollHeight - scollingElement.offsetHeight;
+
+  if (remainingBottom == scollingElement.scrollTop) {
+    fetchNextDataFromSever();
+  }
 });
 
 /***/ }),
 
-/***/ 5:
-/*!********************************************!*\
-  !*** multi ./resources/js/submit-leave.js ***!
-  \********************************************/
+/***/ 7:
+/*!**********************************************!*\
+  !*** multi ./resources/js/leave-approval.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/resources/js/submit-leave.js */"./resources/js/submit-leave.js");
+module.exports = __webpack_require__(/*! /var/www/html/resources/js/leave-approval.js */"./resources/js/leave-approval.js");
 
 
 /***/ })
