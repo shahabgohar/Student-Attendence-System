@@ -2,12 +2,73 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\StudentClass;
+use App\Models\User;
+use App\Models\UserProfile;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use MongoDB\Driver\Session;
 
 class CreateStudent extends Component
 {
+
+    use WithFileUploads;
+    public $form = [];
+    public $isStudentCreated = 0;
+    public function mount(){
+        $this->form['first_name']=null;
+        $this->form['last_name']=null;
+        $this->form['mid_name']=null;
+        $this->form['email']=null;
+        $this->form['password']= null;
+        $this->form['father_name']=null;
+        $this->form['student_class_id']=null;
+        $this->form['roll_number']=null;
+        $this->form['gender']=null;
+        $this->form['photo']=null;
+    }
+    protected $rules = [
+        'form.first_name' => 'required',
+        'form.last_name' => 'required',
+        'form.email' => 'required|email|unique:users,email',
+        'form.class' => 'integer|max:12',
+        'form.roll_number'=>'integer|required',
+        'form.gender' => 'required',
+        'form.photo' => 'required',
+        'form.father_name' => 'required'
+    ];
     public function render()
     {
-        return view('livewire.create-student');
+        return view('livewire.create-student')
+            ->extends('layouts.app')
+            ->section('content');
     }
+
+    public function signUpUser(){
+        $this->validate($this->rules);
+//            creating the user
+        $user = new User();
+        $user->initiWithValues('users',$this->form);
+        $user->password = Hash::make('password');
+        $result = $user->save();
+        if ($result){
+            $class = StudentClass::find($this->form['student_class_id']);
+//        setting up user profile
+            $profile  = new UserProfile();
+            $profile->initiWithValues('user_profiles',$this->form);
+            $this->form['photo']->storeAs('users',$user->id);
+            $profile->profile_photo = 'users/'.$user->id;
+            $profile->student_class()->associate($class);
+            $isProfileCreated = $user->user_profile()->save($profile);
+            if ($isProfileCreated){
+                $user->roles()->attach(2);
+            }
+        }
+
+        $this->isStudentCreated = true;
+
+    }
+
 }

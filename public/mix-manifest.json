@@ -3,6 +3,7 @@
     "/css/app.css": "/css/app.css",
     "/css/admin/app.css": "/css/admin/app.css",
     "/js/attendence.js": "/js/attendence.js",
+    "/js/attendence-details.js": "/js/attendence-details.js",
     "/js/attendence-search.js": "/js/attendence-search.js",
     "/js/leave-approval.js": "/js/leave-approval.js",
     "/js/student-details.js": "/js/student-details.js",

@@ -46,7 +46,9 @@
     <script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
     <script src="{{asset('js/view-attendence.js')}}" defer ></script>
 @endif
-<script src="{{asset('js/leave-approval.js')}}" defer></script>
+<script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
+<script src="{{asset('js/attendence-details.js')}}" defer ></script>
+{{--<script src="{{asset('js/leave-approval.js')}}" defer></script>--}}
 <script defer>
 
  Livewire.on('selectMultiple', data => {

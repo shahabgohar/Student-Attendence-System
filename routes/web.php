@@ -20,6 +20,7 @@ Route::middleware(['guest'])->group(function (){
     Route::get('/login',\App\Http\Livewire\Student\Login::class);
     Route::get('/register',\App\Http\Livewire\Student\Signup::class);
     Route::get('/admin',\App\Http\Livewire\AdminLogin::class)->name('admin-login');
+    Route::get('/attendence-detail',[\App\Http\Controllers\AttendenceDetailController::class,'index']);
 
 });
 Route::middleware(['auth','user_role'])->group(function(){
@@ -41,7 +42,8 @@ Route::prefix('/admin')->middleware(['auth','check_role'])->group(function() {
     Route::prefix('/attendence')->group(function (){
         Route::get('/',\App\Http\Livewire\Attendence::class)->name('student-attendence');
         Route::get('/attendence/create',\App\Http\Livewire\CreateAttendence::class)->name('create-attendence');
-
+        Route::get('/details',\App\Http\Livewire\AttendenceDetails::class)->name('attendence-details');
+        Route::get('/list',[\App\Http\Controllers\AttendenceDetailController::class,'index']);
     });
     Route::get('/approve/leave',\App\Http\Livewire\LeaveApproval::class);
     Route::get('/attendences/for/approval',[\App\Http\Controllers\AttendenceController::class,'getLeavesForApproval']);

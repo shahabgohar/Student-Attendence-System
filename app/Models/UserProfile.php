@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\ReuseableCode\InitModelWithProperties;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class UserProfile extends Model
 {
-    use HasFactory;
+    use HasFactory, InitModelWithProperties;
     protected $fillable = [
       'attendence_detail_id'
     ];
@@ -20,6 +21,9 @@ class UserProfile extends Model
     }
     public function attendence_detail(){
         return $this->belongsTo('App\Models\AttendenceDetail');
+    }
+    public function user(){
+        return $this->belongsTo('App\Models\User');
     }
     /**
      * Scope a query to only include popular users.

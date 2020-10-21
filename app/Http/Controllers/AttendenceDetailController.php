@@ -6,6 +6,7 @@ use App\Models\AttendenceDetail;
 use App\ReuseableCode\MarkAttendence;
 use App\ReuseableCode\ProvideDate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class AttendenceDetailController extends Controller
@@ -14,11 +15,14 @@ class AttendenceDetailController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
-        //
+        $attendences = AttendenceDetail::select('student_class_id','attendence_date','start_time','end_time',
+            DB::raw("(CASE WHEN expired = 1 THEN 'yes' ELSE 'No' END) as expired")
+            )->get();
+        return response()->json($attendences);
     }
 
     /**

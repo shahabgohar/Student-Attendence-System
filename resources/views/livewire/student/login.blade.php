@@ -16,7 +16,7 @@
             @if(session()->exists('ability'))
                 <span style="color: red"> * {{session()->pull('ability','delete')}} *</span>
             @endif
-            <button  style="width: 40%; height: 5vh; align-self: center;justify-self: flex-end;"  type="submit">Login</button>
+            <button  style="width: 40%; height: 5vh; align-self: center;justify-self: flex-end;color: white;background-color: black;"  type="submit">Login</button>
 
         </form>
     </div>

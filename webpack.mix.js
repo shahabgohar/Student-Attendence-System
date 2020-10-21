@@ -23,3 +23,5 @@ mix.js('resources/js/student-report.js','public/js/student-report.js')
 mix.js('resources/js/submit-leave.js','public/js/submit-leave.js')
 mix.js('resources/js/view-attendence.js','public/js/view-attendence.js')
 mix.js('resources/js/leave-approval.js','public/js/leave-approval.js')
+mix.js('resources/js/attendence-details.js','public/js/attendence-details.js')
+
