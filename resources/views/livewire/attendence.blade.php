@@ -40,5 +40,4 @@
     <div class="attendence-result">
 
     </div>
-    <script src="{{asset('js/attendence.js')}}" defer></script>
 </div>

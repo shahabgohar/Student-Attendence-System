@@ -19377,13 +19377,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var TurboLInks = __webpack_require__(/*! turbolinks */ "./node_modules/turbolinks/dist/turbolinks.js");
 
 TurboLInks.start();
-Livewire.on('showDropdown', function (data) {
-  if (document.getElementById(data).style.display === "block") {
-    document.getElementById(data).style.display = "none";
-  } else {
-    document.getElementById(data).style.display = "block";
-  }
-});
 
 /***/ }),
 

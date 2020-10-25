@@ -44,11 +44,27 @@ class AttendenceController extends Controller
 
 
         $result = \Illuminate\Support\Facades\DB::table('user_profiles')
-            ->select(['user_profiles.id','users.first_name','attendences.attendence_date','users.last_name','attendences.attendence_date','attendences.status'])
+            ->select('user_profiles.id','users.first_name','attendences.attendence_date','users.last_name','attendences.attendence_date',
+                DB::raw(
+                    " (CASE
+            WHEN attendences.status = 'present' THEN 'present'
+            WHEN attendences.status = 'absent' THEN 'absent'
+            ELSE
+                'Leave'
+            END)
+            AS
+            status
+            "
+                )
+                )
             ->join('attendences','user_profiles.id','=','attendences.user_profile_id')
             ->join('users','users.id','=','user_profiles.id')
             ->whereNull('attendences.deleted_at')
             ->orderBy('user_profiles.id','asc')->get();
+        //          1 ===>  by default it will always be pending
+//          2 ===> rejected
+//          3 ===> approved
+//          4 ===> not a leave
         return response()->json($result);
     }
 

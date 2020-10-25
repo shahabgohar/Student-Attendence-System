@@ -1,6 +1,6 @@
 <nav class="display-flex flex-align-items-center flex-justify-content-space-between">
     @can('view-sidebar')
-    <div class="hamburger display-flex flex-direction-column flex-align-items-center flex-justify-content-space-around" wire:click = "$emit('showDropdown','sidebar')">
+    <div id="hamburger-sidebar" class="hamburger display-flex flex-direction-column flex-align-items-center flex-justify-content-space-around" >
         <div class=""></div>
         <div class=""></div>
         <div class=""></div>

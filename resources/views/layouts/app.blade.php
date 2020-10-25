@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{{asset('js/app.js')}}" defer ></script>
     @if(Route::currentRouteName() === 'submit-leave')
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js" ></script>
@@ -13,7 +14,6 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.js" defer></script>
     <link rel="stylesheet" href="{{asset('css/admin/app.css')}}">
     @livewireStyles
-    <script src="{{asset('js/app.js')}}"  defer></script>
     @livewireScripts
     <script
         src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
@@ -46,9 +46,14 @@
     <script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
     <script src="{{asset('js/view-attendence.js')}}" defer ></script>
 @endif
-<script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
-<script src="{{asset('js/attendence-details.js')}}" defer ></script>
+@if( Route::currentRouteName()=== 'student-attendence')
+    <script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
+    <script src="{{asset('js/attendence.js')}}" defer ></script>
+@endif
+{{--<script src="https://unpkg.com/cheetah-grid@0.22" defer></script>--}}
+{{--<script src="{{asset('js/attendence-details.js')}}" defer ></script>--}}
 {{--<script src="{{asset('js/leave-approval.js')}}" defer></script>--}}
+
 <script defer>
 
  Livewire.on('selectMultiple', data => {
@@ -66,6 +71,25 @@
      document.getElementById(data+"-1").style.display = "block"
      document.getElementById('dropdown-attendence').removeChild(document.getElementById(data))
  })
+ Livewire.on("showDropdown",data=>{
+     let sidebar =  document.getElementById(data)
+     if(sidebar.style.display == 'block'){
+         sidebar.style.display = "none"
+     }else{
+         sidebar.style.display="block"
+     }
+
+ })
+ function toggleSidebar(){
+     let sidebar =  document.getElementById("sidebar")
+     if(sidebar.style.display == 'block'){
+         sidebar.style.display = "none"
+     }else{
+         sidebar.style.display="block"
+     }
+ }
+ document.getElementById("hamburger-sidebar").addEventListener("click",toggleSidebar)
+ document.getElementById("close-sidebar").addEventListener("click",toggleSidebar)
 </script>
 
 </html>
