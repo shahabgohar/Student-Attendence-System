@@ -45,7 +45,7 @@ Route::prefix('/admin')->middleware(['auth','check_role'])->group(function() {
         Route::get('/details',\App\Http\Livewire\AttendenceDetails::class)->name('attendence-details');
         Route::get('/list',[\App\Http\Controllers\AttendenceDetailController::class,'index']);
     });
-    Route::get('/approve/leave',\App\Http\Livewire\LeaveApproval::class);
+    Route::get('/approve/leave',\App\Http\Livewire\LeaveApproval::class)->name("leave-approve");
     Route::get('/attendences/for/approval',[\App\Http\Controllers\AttendenceController::class,'getLeavesForApproval']);
     Route::get('/attendences/leave/application/{id}',[\App\Http\Controllers\AttendenceController::class,'getApplication']);
     Route::post('/approve/application',[\App\Http\Controllers\AttendenceController::class,'approveApplication']);

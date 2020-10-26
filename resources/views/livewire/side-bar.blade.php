@@ -31,6 +31,10 @@
         <div id="attendenceAside" style="display: none" class="aside-element aside-element-dropdown display-flex flex-direction-column flex-align-item-start flex-justify-content-flex-start">
             <h1 wire:click="goto('{{route('attendence-details')}}')">Details</h1>
         </div>
+        <div class="aside-element display-flex flex-direction-row flex-align-items-center flex-justify-content-space-between" >
+            <h1 wire:click="goto('{{route('leave-approve')}}')">Approve Leave</h1>
+
+        </div>
     </div>
 </aside>
 @endcan
