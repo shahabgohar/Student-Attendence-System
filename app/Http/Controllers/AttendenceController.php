@@ -61,10 +61,6 @@ class AttendenceController extends Controller
             ->join('users','users.id','=','user_profiles.id')
             ->whereNull('attendences.deleted_at')
             ->orderBy('user_profiles.id','asc')->get();
-        //          1 ===>  by default it will always be pending
-//          2 ===> rejected
-//          3 ===> approved
-//          4 ===> not a leave
         return response()->json($result);
     }
 

@@ -6,12 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="{{asset('js/app.js')}}" defer ></script>
-    @if(Route::currentRouteName() === 'submit-leave')
+    @if(Route::currentRouteName() === 'submit-leave' || Route::currentRouteName()=== 'attendence-details')
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js" ></script>
     @endif
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js" defer></script>
     <link rel="stylesheet" href="{{asset('css/admin/app.css')}}">
     @livewireStyles
     @livewireScripts
@@ -50,9 +48,12 @@
     <script src="https://unpkg.com/cheetah-grid@0.22" defer></script>
     <script src="{{asset('js/attendence.js')}}" defer ></script>
 @endif
-{{--<script src="https://unpkg.com/cheetah-grid@0.22" defer></script>--}}
-{{--<script src="{{asset('js/attendence-details.js')}}" defer ></script>--}}
-{{--<script src="{{asset('js/leave-approval.js')}}" defer></script>--}}
+@if( Route::currentRouteName()=== 'attendence-details')
+    <script src="{{asset('js/attendence-details.js')}}" defer ></script>
+    <script src="{{asset('js/leave-approval.js')}}" defer></script>
+@endif
+
+
 
 <script defer>
 
